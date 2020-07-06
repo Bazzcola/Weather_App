@@ -1,21 +1,22 @@
 interface Temp {
     max: number;
     min: number;
+    temp:number;
 }
 
 interface Weather {
     main: string;
-}
-
-export interface dayData {
-    day:ForecastData;
-    index:number;
+    icon: string;
 }
 
 interface Main {
     humidity:number;
-    temp_min:number;
-    temp_max:number;
+    temp:Temp;
+}
+export interface dayData {
+    day:ForecastData;
+    index:number;
+    temp: Temp;
 }
 export interface ForecastData {
     dt: number;
@@ -23,6 +24,7 @@ export interface ForecastData {
     temp: Temp;
     weather: Weather[];
     main:Main;
+    dt_txt: string;
 }
 export interface Props {
     data:ForecastData[];

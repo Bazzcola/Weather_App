@@ -37,7 +37,10 @@
     ]
   },
   "devDependencies": {
+    "@types/react-router-dom": "^5.1.5",
     "axios": "^0.19.2",
+    "dayjs": "^1.8.29",
+    "eslint": "^7.4.0",
     "react-router-dom": "^5.2.0"
   }
 }
