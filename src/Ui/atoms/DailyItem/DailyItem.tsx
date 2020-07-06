@@ -1,6 +1,6 @@
 import React from 'react';
 import { ForecastData } from '../../../interfaces';
-import '../atoms/DailyItem.css';
+import '../../atoms/DailyItem/DailyItem.css';
 import dayjs from 'dayjs';
 
 interface DailyItem {

@@ -6,7 +6,7 @@ import {
 import { DailyObject } from '../../molecules/DailyObject/DailyObject';
 import { DailyHour } from '../../molecules/DailyHour/DailyHour';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
-import '../organism/App.css';
+import '../../organism/App/App.css';
 
 export const App: React.FC = () => {
   const [forecastData, setForecastData] = useState<any>([]);

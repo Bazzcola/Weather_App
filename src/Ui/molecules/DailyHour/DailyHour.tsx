@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { ForecastData } from '../../../interfaces';
 import { DailyHourItem } from '../../atoms/DailyHourItem/DailyHourItem';
-import '../molecules/DailyHour.css';
+import '../../molecules/DailyHour/DailyHour.css';
 
 interface Props {
   dataEnter: any;

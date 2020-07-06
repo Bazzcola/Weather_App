@@ -1,6 +1,6 @@
 import React from 'react';
 import { ForecastData } from '../../../interfaces';
-import '../atoms/DailyHourItem.css';
+import '../../atoms/DailyHourItem/DailyHourItem.css';
 
 interface DailyHourItem {
   day: ForecastData;
