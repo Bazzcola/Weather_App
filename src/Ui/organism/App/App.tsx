@@ -2,9 +2,9 @@ import React, { useState, useEffect } from 'react';
 import {
   show5DayWeather,
   show3HourWeather
-} from '../../Weather_Api/WeatherKeys';
-import { DailyObject } from '../molecules/DailyObject';
-import { DailyHour } from '../molecules/DailyHour';
+} from '../../../Weather_Api/WeatherKeys';
+import { DailyObject } from '../../molecules/DailyObject/DailyObject';
+import { DailyHour } from '../../molecules/DailyHour/DailyHour';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import '../organism/App.css';
 

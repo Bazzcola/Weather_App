@@ -1,6 +1,6 @@
 import React, { useState, useEffect } from 'react';
-import { DailyItem } from '../atoms/DailyItem';
-import { ForecastData } from '../../interfaces';
+import { DailyItem } from '../../atoms/DailyItem/DailyItem';
+import { ForecastData } from '../../../interfaces';
 import '../molecules/DailyObject.css';
 
 interface Props {

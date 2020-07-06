@@ -1,5 +1,5 @@
 import React from 'react';
-import { ForecastData } from '../../interfaces';
+import { ForecastData } from '../../../interfaces';
 import '../atoms/DailyHourItem.css';
 
 interface DailyHourItem {
