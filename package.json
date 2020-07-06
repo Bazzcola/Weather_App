@@ -62,8 +62,7 @@
       "eslint -c .eslintrc --fix --color"
     ],
     "*.(js|html|css)": [
-      "npx prettier --write -c .prettierrc",
-      "git add"
+      "npx prettier --write -c .prettierrc"
     ]
   }
 }
