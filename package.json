@@ -19,7 +19,8 @@
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "format": "npx prettier --write \"src/**/*.{js,jsx,ts,tsx,json,scss}\""
   },
   "eslintConfig": {
     "extends": "react-app"
@@ -40,7 +41,29 @@
     "@types/react-router-dom": "^5.1.5",
     "axios": "^0.19.2",
     "dayjs": "^1.8.29",
-    "eslint": "^7.4.0",
+    "eslint": "^7.2.0",
+    "eslint-config-airbnb": "^18.2.0",
+    "eslint-plugin-import": "^2.21.2",
+    "eslint-plugin-jsx-a11y": "^6.3.0",
+    "eslint-plugin-react": "^7.20.0",
+    "eslint-plugin-react-hooks": "^4.0.0",
+    "husky": "^4.2.5",
+    "lint-staged": "^10.2.11",
+    "prettier": "2.0.5",
     "react-router-dom": "^5.2.0"
+  },
+  "husky": {
+    "hooks": {
+      "pre-commit": "lint-staged"
+    }
+  },
+  "lint-staged": {
+    "src/**/*.{js,jsx}": [
+      "eslint -c .eslintrc --fix --color"
+    ],
+    "*.(js|html|css)": [
+      "npx prettier --write -c .prettierrc",
+      "git add"
+    ]
   }
 }

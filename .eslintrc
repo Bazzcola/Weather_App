@@ -1,0 +1,13 @@
+{   
+    "env": {
+        "browser": true,
+        "es2020": true
+    },
+    "plugins": ["react", "prettier"],
+    "rules": {   
+        "react/jsx-uses-react": "error",   
+        "react/jsx-uses-vars": "error",
+        "react/prop-types": "off"
+    },
+    "extends": ["airbnb", "prettier"]
+}
