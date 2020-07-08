@@ -1,13 +1,12 @@
 import React from 'react';
-import { ForecastData } from '../../../interfaces';
-import '../../atoms/DailyItem/DailyItem.css';
 import dayjs from 'dayjs';
+import { ForecastData } from 'interfaces';
+import 'ui/atoms/DailyItem/DailyItem.css';
 
 interface DailyItem {
   day: ForecastData;
   index: number;
 }
-
 interface Props {
   dayData: DailyItem;
 }
@@ -15,7 +14,7 @@ const mathC = (temp: number) => {
   return Math.round(temp);
 };
 
-export const DailyItem = (props: Props) => {
+export const DailyItem: React.FC<Props> = (props) => {
   const { dt } = props.dayData.day;
 
   const getDay = () => {

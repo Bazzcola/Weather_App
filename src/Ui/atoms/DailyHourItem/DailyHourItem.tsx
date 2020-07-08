@@ -1,6 +1,6 @@
 import React from 'react';
-import { ForecastData } from '../../../interfaces';
-import '../../atoms/DailyHourItem/DailyHourItem.css';
+import { ForecastData } from 'interfaces';
+import 'ui/atoms/DailyHourItem/DailyHourItem.css';
 
 interface DailyHourItem {
   day: ForecastData;
@@ -11,11 +11,11 @@ interface Props {
   dayData: DailyHourItem;
 }
 
-const mathC = (number: any) => {
-  return Math.round(number);
+const mathC = (temp: number) => {
+  return Math.round(temp);
 };
 
-export const DailyHourItem = (props: Props) => {
+export const DailyHourItem: React.FC<Props> = (props) => {
   return (
     <div className="weather_day_hour">
       <h1>Time:</h1>

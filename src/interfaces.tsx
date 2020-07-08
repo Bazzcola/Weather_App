@@ -1,4 +1,4 @@
-interface Temp {
+export interface Temp {
   max: number;
   min: number;
   temp: number;
@@ -11,7 +11,7 @@ interface Weather {
 
 interface Main {
   humidity: number;
-  temp: Temp;
+  temp: number;
 }
 export interface dayData {
   day: ForecastData;
@@ -25,6 +25,7 @@ export interface ForecastData {
   weather: Weather[];
   main: Main;
   dt_txt: string;
+  
 }
 export interface Props {
   data: ForecastData[];
