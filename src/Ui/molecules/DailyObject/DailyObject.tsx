@@ -4,20 +4,19 @@ import { ForecastData } from 'interfaces';
 import { show5DayWeather } from 'weather-api/WeatherKeys';
 import 'ui/molecules/DailyObject/DailyObject.css';
 
-
 interface Props {
   dataEnter: ForecastData[];
 }
 
 export const DailyObject: React.FC<Props> = (props) => {
   const [forecastData, setForecastData] = useState<ForecastData[]>([]);
-  const [loading, isLoading] = useState(true)
-  
+  const [loading, isLoading] = useState(true);
+
   useEffect(() => {
     const getData = async () => {
       const saveData = await show5DayWeather();
       setForecastData(saveData.list);
-      isLoading(false)
+      isLoading(false);
     };
     getData();
   }, [setForecastData]);

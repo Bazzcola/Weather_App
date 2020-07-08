@@ -10,13 +10,13 @@ interface Props {
 
 export const DailyHour: React.FC<Props> = (props) => {
   const [dailyData, setDailyData] = useState<ForecastData[]>([]);
-  const [loading, isLoading] = useState<boolean>(true)
+  const [loading, isLoading] = useState<boolean>(true);
 
   useEffect(() => {
     const getData = async () => {
       const saveData = await show3HourWeather();
       setDailyData(saveData.list);
-      isLoading(false)
+      isLoading(false);
     };
     getData();
   }, [setDailyData]);

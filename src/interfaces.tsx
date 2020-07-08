@@ -25,7 +25,6 @@ export interface ForecastData {
   weather: Weather[];
   main: Main;
   dt_txt: string;
-  
 }
 export interface Props {
   data: ForecastData[];

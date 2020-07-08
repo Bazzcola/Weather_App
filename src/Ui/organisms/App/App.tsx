@@ -1,4 +1,4 @@
-import React, { useState} from 'react';
+import React, { useState } from 'react';
 import { BrowserRouter as Router, Switch, Route, Link } from 'react-router-dom';
 import { DailyObject } from 'ui/molecules/DailyObject/DailyObject';
 import { DailyHour } from 'ui/molecules/DailyHour/DailyHour';
@@ -8,7 +8,7 @@ import 'ui/organisms/App/App.css';
 export const App: React.FC = () => {
   const [forecastData] = useState<ForecastData[]>([]);
   const [dailyData] = useState<ForecastData[]>([]);
-  
+
   return (
     <Router>
       <Switch>
