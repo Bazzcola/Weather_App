@@ -27,7 +27,7 @@ export const DailyObject: React.FC<Props> = (props) => {
 
   return (
     <div className="weather_container">
-      {loading && <div>Loading</div>}
+      {loading && <div className="loading">Loading...</div>}
       {forecastData &&
         forecastData.map((day: ForecastData, key: number) => (
           <DailyItem dayData={{ day, index: key }} key={day.dt} />
