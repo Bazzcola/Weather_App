@@ -22,9 +22,11 @@ export const DailyHour: React.FC<Props> = (props) => {
         console.log('error');
       }
     };
+    
     getData();
+    
     return () => show3HourWeather.cancel();
-  }, [setDailyData]);
+  }, []);
 
   useEffect(() => {
     setDailyData(props.dataEnter);
@@ -33,6 +35,7 @@ export const DailyHour: React.FC<Props> = (props) => {
   return (
     <div className="weather_container__hour">
       {loading && <div className="loading">Loading...</div>}
+      
       {dailyData &&
         dailyData.map((day: ForecastData, key: number) => (
           <DailyHourItem dayData={{ day, index: key }} key={day.dt} />
