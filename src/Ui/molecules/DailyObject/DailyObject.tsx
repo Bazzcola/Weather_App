@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import { DailyItem } from 'ui/atoms/DailyItem/DailyItem';
-import { ForecastData } from 'interfaces';
 import { show5DayWeather } from 'weather-api/WeatherKeys';
+import { ForecastData } from 'interfaces';
 import 'ui/molecules/DailyObject/DailyObject.css';
 
 interface Props {
@@ -14,11 +14,16 @@ export const DailyObject: React.FC<Props> = (props) => {
 
   useEffect(() => {
     const getData = async () => {
-      const saveData = await show5DayWeather();
-      setForecastData(saveData.list);
-      isLoading(false);
+      try {
+        const saveData = await show5DayWeather.request();
+        setForecastData(saveData.list);
+        isLoading(false);
+      } catch (error) {
+        console.log('errror');
+      }
     };
     getData();
+    return () => show5DayWeather.cancel();
   }, [setForecastData]);
 
   useEffect(() => {
