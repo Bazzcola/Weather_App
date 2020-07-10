@@ -59,9 +59,6 @@
     }
   },
   "lint-staged": {
-    "src/**/*.{js,jsx,ts,tsx}": [
-      "eslint -c .eslintrc --fix --color"
-    ],
     "*.(js|js|ts|tsx|html|css)": [
       "npx prettier --write -c .prettierrc"
     ]

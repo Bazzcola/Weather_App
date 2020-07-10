@@ -13,29 +13,28 @@ export const DailyObject: React.FC<Props> = (props) => {
   const [loading, isLoading] = useState(true);
 
   useEffect(() => {
+    console.log('sdsds');
     const getData = async () => {
       try {
         const saveData = await show5DayWeather.request();
         setForecastData(saveData.list);
         isLoading(false);
       } catch (error) {
-        console.log('error');
+        console.log('error', error);
       }
     };
-    
-    getData();
-    
-    return () => show5DayWeather.cancel();
-  }, []);
 
-  useEffect(() => {
-    setForecastData(props.dataEnter);
-  }, [props.dataEnter]);
+    getData();
+
+    return () => {
+      show5DayWeather.cancel();
+    };
+  }, []);
 
   return (
     <div className="weather_container">
       {loading && <div className="loading">Loading...</div>}
-      
+
       {forecastData &&
         forecastData.map((day: ForecastData, key: number) => (
           <DailyItem dayData={{ day, index: key }} key={day.dt} />
