@@ -22,9 +22,7 @@ export const DailyHour: React.FC<Props> = (props) => {
         console.log('error');
       }
     };
-
     getData();
-
     return () => {
       show3HourWeather.cancel();
     };
