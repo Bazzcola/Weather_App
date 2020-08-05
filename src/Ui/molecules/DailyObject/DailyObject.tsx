@@ -8,7 +8,7 @@ interface Props {
   dataEnter: ForecastData[];
 }
 
-export const DailyObject: React.FC<Props> = (props) => {
+export const DailyObject: React.FC<Props> = () => {
   const [forecastData, setForecastData] = useState<ForecastData[]>([]);
   const [loading, isLoading] = useState(true);
 
